@@ -1,0 +1,556 @@
+@font-face {
+  font-family: DMSans;
+  src: url(assets/fonts/DMSans-VariableFont.ttf);
+}
+
+@font-face {
+  font-family: Montserrat;
+  src: url(assets//fonts/Montserrat-VariableFont_wght.ttf);
+}
+
+@font-face {
+  font-family: Rubik;
+  src: url(assets//fonts/Rubik-VariableFont_wght.ttf);
+}
+@font-face {
+  font-family: SpaceGrotesk;
+  src: url(assets/fonts/SpaceGrotesk-VariableFont_wght.ttf);
+}
+@font-face {
+  font-family: WorkSans;
+  src: url(assets/fonts/WorkSans-VariableFont_wght.ttf);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+
+img,
+picture,
+svg,
+video {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+textarea,
+button,
+select {
+  font: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+small {
+  font-size: inherit;
+}
+input {
+  border: none;
+  padding: 8px;
+  &:focus {
+    border-bottom: 1.5px solid #6600ea !important;
+  }
+  &:focus-within {
+    outline: none;
+  }
+}
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+  font-family: Montserrat, "Trebuchet MS", "Lucida Sans Unicode",
+    "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+}
+
+header {
+  background: #e8e6e6;
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 16px;
+  @media screen and (min-width: 768px) {
+    padding: 16px 80px;
+  }
+
+  .brand {
+    display: flex;
+    align-items: center;
+    column-gap: 16px;
+    .brand__logo {
+      width: 25px;
+      height: 25px;
+      border-radius: 13px;
+      background-color: #eea302;
+    }
+    .brand__name {
+      font-size: 14px;
+      line-height: 20px;
+      font-family: SpaceGrostesk;
+      @media screen and (min-width: 768px) {
+        font-size: 22px;
+        line-height: 30px;
+      }
+    }
+  }
+
+  .currentUTC-time-day {
+    display: flex;
+    gap: 0 4px;
+    font-size: 14px;
+    line-height: 20px;
+    @media screen and (min-width: 768px) {
+      font-size: 18px;
+      line-height: 26px;
+    }
+  }
+}
+.heading {
+  display: flex;
+  flex-direction: column;
+  padding-top: 40px;
+  h1 {
+    font-size: 52px;
+    text-align: center;
+    font-family: Rubik;
+    @media screen and (min-width: 768px) {
+      font-size: 116px;
+      line-height: 116px;
+      margin-bottom: 52px;
+    }
+  }
+  h6 {
+    font-size: 18px;
+    line-height: 28px;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 400;
+    font-family: WorkSans;
+    order: 2;
+    margin-bottom: 36px;
+    @media screen and (min-width: 768px) {
+      margin: 0px 0 8px;
+      margin-bottom: 0px;
+      order: 1;
+      font-size: 22px;
+      line-height: 44px;
+    }
+  }
+}
+
+nav.nav {
+  padding: 0 8px;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  @media screen and (min-width: 768px) {
+    padding: 0 32px;
+  }
+  .links {
+    display: flex;
+    width: fit-content;
+    margin: 0 auto;
+  }
+  .links > li {
+    list-style: none;
+    &:first-child {
+      border-left: 1px solid black;
+    }
+    a {
+      display: inline-block;
+      color: black;
+      padding: 8px;
+      border-right: 1px solid black;
+      text-decoration: none;
+      font-size: 12px;
+      @media screen and (min-width: 768px) {
+        font-size: 14px;
+        padding: 16px 50px;
+      }
+    }
+  }
+}
+
+.featured-post {
+  border: 1px solid black;
+  position: relative;
+  max-width: 940px;
+  margin: 96px auto;
+
+  &:before {
+    content: "featured post";
+    text-transform: uppercase;
+    font-size: 18px;
+    padding: 8px 16px;
+    position: absolute;
+    height: fit-content;
+    top: -20px;
+    left: -1px;
+    background-color: white;
+    width: fit-content;
+    border: 1px solid black;
+    @media screen and (min-width: 768px) {
+      top: -21px;
+      font-size: 22px;
+      padding: 10px 32px;
+    }
+  }
+
+  .post-content {
+    padding: 16px 24px 20px;
+    @media screen and (min-width: 768px) {
+      padding: 28px 30px 25px;
+    }
+
+    .date-time {
+      display: flex;
+      align-items: center;
+      column-gap: 16px;
+      /* margin-bottom: 12px; */
+      font-size: 12px;
+      @media screen and (min-width: 768px) {
+        font-size: 18px;
+        line-height: 34px;
+      }
+    }
+
+    h4.title {
+      font-size: 24px;
+      font-weight: 500;
+      margin: 10px 0 18px;
+      @media screen and (min-width: 768px) {
+        font-size: 36px;
+        margin: 16px 0 24px;
+      }
+    }
+    p.text {
+      font-size: 18px;
+      line-height: 28px;
+      @media screen and (min-width: 768px) {
+        font-size: 22px;
+        line-height: 30px;
+      }
+    }
+  }
+}
+
+.subscribe {
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  padding: 40px 16px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  row-gap: 32px;
+  @media screen and (min-width: 768px) {
+    padding: 56px 80px;
+    justify-content: space-between;
+    flex-direction: row;
+  }
+
+  .text {
+    font-size: 30px;
+    font-family: DMSans;
+    @media screen and (min-width: 768px) {
+      font-size: 38px;
+    }
+  }
+  form {
+    display: flex;
+    align-items: flex-end;
+    column-gap: 16px;
+  }
+  .email-input {
+    display: flex;
+    flex-direction: column;
+    column-gap: 16px;
+
+    input {
+      border: none;
+      width: 100%;
+      margin-top: -2px;
+      border-bottom: 1px solid black;
+      @media screen and (min-width: 768px) {
+        width: 320px;
+        margin-top: 16px;
+      }
+    }
+  }
+  button[type="submit"] {
+    padding: 16px 24px;
+    font-size: 14px;
+    border: none;
+    color: white;
+    background-color: #6600ea;
+  }
+}
+
+.main-container {
+  padding: 10px 16px;
+  border-bottom: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  row-gap: 64px;
+  @media screen and (min-width: 768px) {
+    flex-direction: row;
+    padding: 10px 80px;
+  }
+}
+
+.posts-container {
+  padding: 48px 0 0 0;
+  @media screen and (min-width: 768px) {
+    flex-shrink: 0;
+    width: 66%;
+    padding: 112px 120px 0 0;
+    border-right: 2px solid black;
+  }
+  > .title {
+    font-size: 28px;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-weight: 300;
+    font-family: Rubik;
+    margin-bottom: 32px;
+    @media screen and (min-width: 768px) {
+      font-size: 36px;
+      margin-bottom: 68px;
+    }
+  }
+}
+.posts {
+  display: flex;
+  flex-direction: column;
+  row-gap: 32px;
+}
+.post {
+  display: flex;
+  border: 1px solid black;
+
+  .post-image {
+    flex: 1 1 0%;
+  }
+
+  .post-content {
+    flex: 1 1 0%;
+    padding: 12px 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    @media screen and (min-width: 768px) {
+      padding: 24px 28px;
+    }
+
+    .date-time {
+      display: flex;
+      column-gap: 10px;
+      align-items: center;
+      font-size: 12px;
+      @media screen and (min-width: 768px) {
+        font-size: 14px;
+      }
+    }
+    .title {
+      margin-top: 8px;
+      font-size: 20px;
+      font-weight: 700;
+      @media screen and (min-width: 768px) {
+        margin-top: 24px;
+        font-size: 24px;
+        line-height: 36px;
+      }
+    }
+    .text {
+      font-size: 14px;
+      text-wrap: balance;
+      overflow: hidden;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 2;
+      @media screen and (min-width: 768px) {
+        font-size: 18px;
+      }
+    }
+    .info {
+      display: flex;
+      justify-content: space-between;
+      padding: 4px 0 0;
+      border-top: 1px solid #e8e6e6;
+      font-size: 12px;
+      @media screen and (min-width: 768px) {
+        font-size: 16px;
+        padding: 16px 0 0;
+        border-top: 2px solid #e8e6e6;
+      }
+      .metrics {
+        display: flex;
+        justify-content: space-between;
+        gap: 0 10px;
+      }
+      .likes {
+        display: flex;
+        justify-content: space-between;
+        gap: 0 10px;
+      }
+    }
+  }
+}
+
+.about {
+  /* width: 40%; */
+  flex-grow: 0;
+  @media screen and (min-width: 768px) {
+    padding: 112px 0 0 80px;
+  }
+  > .title {
+    font-size: 36px;
+    text-transform: uppercase;
+    margin-bottom: 68px;
+    letter-spacing: 5px;
+    font-weight: 300;
+    font-family: Rubik;
+  }
+  img {
+    border: 1px solid black;
+  }
+  .about__me-text {
+    font-size: 22px;
+    line-height: 32px;
+    margin: 48px 0;
+  }
+
+  .tech-goals {
+    padding: 16px 0;
+
+    h5.title {
+      border-top: 1px solid black;
+      border-bottom: 1px solid black;
+      padding: 4px 0;
+      font-size: 24px;
+      font-family: Rubik;
+      margin-bottom: 8px;
+    }
+    ol {
+      margin-left: -8px;
+
+      li {
+        margin-bottom: 8px;
+      }
+
+      h6 {
+        font-size: 18px;
+        line-height: 22px;
+        font-weight: 500;
+        margin-bottom: 2px;
+      }
+    }
+  }
+
+  .contact-details {
+    margin: 0 -20px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 8px;
+    h5.title {
+      font-size: 22px;
+      font-weight: 500;
+      font-family: SpaceGrotesk;
+    }
+    h6 {
+      font-size: 16px;
+      font-weight: 500;
+      font-family: WorkSans;
+    }
+    p {
+      font-size: 14px;
+      font-family: SpaceGrotesk;
+    }
+  }
+}
+
+.contact-me {
+  max-width: 980px;
+  margin: 64px 16px;
+  /* padding: 80px 0; */
+  @media screen and (min-width: 768px) {
+    max-width: 980px;
+    margin: 80px auto;
+  }
+  h4.text {
+    font-size: 32px;
+    text-align: center;
+    @media screen and (min-width: 768px) {
+      font-size: 40px;
+    }
+  }
+  form {
+    margin: 40px 16px;
+    display: grid;
+    gap: 54px 0;
+    @media screen and (min-width: 768px) {
+      margin: 80px 120px 0;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 80px 56px;
+    }
+    .label {
+      font-size: 14px;
+      font-weight: 600;
+      color: black;
+    }
+    input,
+    textarea {
+      margin-top: 8px;
+      border: none;
+      border-bottom: 1px solid black;
+      width: 100%;
+      @media screen and (min-width: 768px) {
+        margin-top: 32px;
+      }
+      &:focus {
+        outline: none;
+      }
+    }
+    .email-box,
+    .message-box,
+    .submit-button {
+      grid-column: 1 / span 2;
+    }
+    .submit-button {
+      display: flex;
+      justify-content: center;
+      button[type="submit"] {
+        width: fit-content;
+        border: none;
+        padding: 12px 60px;
+        letter-spacing: 2px;
+        font-size: 16px;
+        font-weight: 500;
+        background: #000;
+        color: white;
+      }
+    }
+  }
+}
+
+footer {
+  background: #e8e6e6;
+  display: flex;
+  justify-content: center;
+  padding: 12px 0;
+  p {
+    font-size: 14px;
+  }
+}
