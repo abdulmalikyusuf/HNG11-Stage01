@@ -123,6 +123,9 @@ header {
   display: flex;
   flex-direction: column;
   padding-top: 40px;
+  @media screen and (min-width: 768px) {
+    flex-direction: column-reverse;
+  }
   h1 {
     font-size: 52px;
     text-align: center;
@@ -202,7 +205,9 @@ nav.nav {
     background-color: white;
     width: fit-content;
     border: 1px solid black;
-    @media screen and (min-width: 768px) {
+  }
+  @media screen and (min-width: 768px) {
+    &:before {
       top: -21px;
       font-size: 22px;
       padding: 10px 32px;
@@ -460,10 +465,12 @@ nav.nav {
   }
 
   .contact-details {
-    margin: 0 -20px;
     display: flex;
     flex-direction: column;
     row-gap: 8px;
+    @media screen and (min-width: 768px) {
+      margin: 0 -20px;
+    }
     h5.title {
       font-size: 22px;
       font-weight: 500;
